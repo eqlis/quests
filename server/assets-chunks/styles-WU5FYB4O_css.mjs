@@ -1,0 +1,2 @@
+export default `@media(max-width:480px){h2{font-size:1.1rem}p{font-size:.9rem}}h1{text-align:center;margin-bottom:2rem;font-size:clamp(1.5rem,4vw,2.5rem)}p{color:#555;line-height:1.5}
+`;
