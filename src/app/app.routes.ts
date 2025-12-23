@@ -9,7 +9,7 @@ export const routes: Routes = [
         title: 'Quests',
     },
     {
-        path: 'quest/:id',
+        path: 'quest',
         component: QuestComponent,
         title: 'Quest Progress',
     }

@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
     <p>{{ quest.description }}</p>
     <img [src]="quest.image" alt="{{ quest.title }} image" />
     <p>Number of Tasks: {{ quest.tasks.length }}</p>
-    <a [routerLink]="['/quest', quest.id]">Start Quest</a>
+    <a [routerLink]="'/quest'">Start Quest</a>
   `,
   styleUrl: './quest-preview.component.css',
 })

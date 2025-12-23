@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { QuestService } from '../quest-service';
 import { Quest } from '../quest';
@@ -40,7 +40,6 @@ import { Quest } from '../quest';
   styleUrl: './quest.component.css',
 })
 export class QuestComponent {
-  route: ActivatedRoute = inject(ActivatedRoute);
   questService: QuestService = inject(QuestService);
   quest: Quest | undefined;
   currentTaskIndex = signal(0);
@@ -51,8 +50,7 @@ export class QuestComponent {
   taskCompleted: boolean = false;
 
   constructor() {
-    const QuestId = Number(this.route.snapshot.params['id']);
-    this.quest = this.questService.getQuestById(QuestId);
+    this.quest = this.questService.getQuest();
   }
 
   startQuest(): void {

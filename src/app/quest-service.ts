@@ -58,7 +58,7 @@ export class QuestService {
     return this.quests;
   }
 
-  getQuestById(id: Number): Quest | undefined {
-    return this.quests.find(quest => quest.id === id);
+  getQuest(): Quest {
+    return this.quests[0];
   }
 }
