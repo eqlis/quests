@@ -3,5 +3,5 @@ export interface Task {
     title: string;
     description: string;
     image: string;
-    confirmationCode: string;
+    answer: string;
 }

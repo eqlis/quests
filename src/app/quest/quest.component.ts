@@ -21,10 +21,10 @@ import { Quest } from '../quest';
           <h2>{{quest.tasks[currentTaskIndex()].title}}</h2>
           <p class="text-block">{{quest.tasks[currentTaskIndex()].description}}</p>
           <img [src]="quest.tasks[currentTaskIndex()].image" alt="{{ quest.tasks[currentTaskIndex()].title }} image" />
-          <form class="confirmation-form">
-            <label for="confirmationCode">Confirmation Code:</label>
-            <input id="confirmationCode" name="confirmationCode" type="text" #code />
-            <button type="button" (click)="submitConfirmation(code)">Verify</button>
+          <form>
+            <label for="answer">Answer:</label>
+            <input id="answer" name="answer" type="text" #code />
+            <button type="button" (click)="submitAnswer(code)">Verify</button>
           </form>
           <div [hidden]="resultHidden">
             <span [ngClass]="{success: resultStatus() === 'success', error: resultStatus() === 'error'}">{{result()}}</span>
@@ -57,14 +57,24 @@ export class QuestComponent {
     this.questStarted = true;
   }
 
-  submitConfirmation(code: HTMLInputElement): void {
+  normalizeString(value: string): string {
+    return value.trim().toLowerCase().replace(' ', '');
+  }
+
+  submitAnswer(code: HTMLInputElement): void {
     this.resultHidden = false;
-    if (this.quest?.tasks[this.currentTaskIndex()] && code.value === this.quest.tasks[this.currentTaskIndex()].confirmationCode) {
+
+    const task = this.quest?.tasks[this.currentTaskIndex()];
+    if (!task) {
+       return;
+    }
+
+    if (this.normalizeString(code.value) === this.normalizeString(task.answer)) {
       this.result.set("Task completed successfully!");
       this.resultStatus.set('success');
       this.taskCompleted = true;
     } else {
-      this.result.set("Incorrect confirmation code.");
+      this.result.set("Incorrect answer.");
       this.resultStatus.set('error');
       code.value = '';
     }
