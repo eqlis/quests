@@ -1,7 +1,7 @@
 export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
   <meta charset="utf-8">
   <title>Quests</title>
-  <base href="/quests/">
+  <base href="/quests">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>@media(max-width:480px){h2{font-size:1.1rem}p{font-size:.9rem}}h1{text-align:center;margin-bottom:2rem;font-size:clamp(1.5rem,4vw,2.5rem)}p{color:#555;line-height:1.5}
@@ -9,6 +9,6 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
 <body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
 </script><script>window.__jsaction_bootstrap(document.body,"ng",["click"],[]);</script>
   <app-root ng-version="21.0.5" ngh="2" ng-server-context="ssg"><main><router-outlet></router-outlet><app-collection _nghost-ng-c4207953627 ngh="1"><h1 _ngcontent-ng-c4207953627>Quests</h1><section _ngcontent-ng-c4207953627><app-quest-preview _ngcontent-ng-c4207953627 _nghost-ng-c973391311 ngh="0"><h2 _ngcontent-ng-c973391311>Christmas Gift Hunt</h2><p _ngcontent-ng-c973391311>Solve puzzles to find hidden gifts around the house.</p><img _ngcontent-ng-c973391311 alt="Christmas Gift Hunt image" src="./assets/gifts.jpg"><p _ngcontent-ng-c973391311>Number of Tasks: 5</p><a _ngcontent-ng-c973391311 href="/quests/quest" jsaction="click:;">Start Quest</a></app-quest-preview><!----></section></app-collection><!----></main></app-root>
-<script src="main-O6FFMA2O.js" type="module"></script>
+<script src="main-SJYFOG4Z.js" type="module"></script>
 
 <script id="ng-state" type="application/json">{"__nghData__":[{},{"t":{"4":"t0"},"c":{"4":[{"i":"t0","r":1}]}},{"c":{"1":[{"i":"c4207953627","r":1}]}}]}</script></body></html>`;
