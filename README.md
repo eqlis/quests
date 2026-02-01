@@ -76,3 +76,12 @@ Some ideas for future development include:
 - Improved validation and optional hint systems
 
 These features are outside the scope of the current implementation but represent the long-term vision for the project.
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🖼 Assets
+
+This project uses a mix of original images and images sourced from free resources such as Pexels and Wikimedia Commons.
+Wikipedia images are used in accordance with their respective Creative Commons licenses.
